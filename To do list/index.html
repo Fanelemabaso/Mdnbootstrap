@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="ToDo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Todo</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body ng-controller="todoController">
+  <div class="whatever" style="padding: 15px;">
+  <h1 style="text-align: center;">My Todo</h1>
+  <div class="container" style="margin-left: 43%">
+<form name="frm" ng-submit="addTodo()">
+  <!-- Grid row -->
+  <div class="form-row align-items-center">
+    <!-- Grid column -->
+    <div class="col-auto">
+      <!-- Material input -->
+      <div class="md-form">
+        <input type="text" class="form-control mb-2" id="inlineFormInputMD" name="newTodo" ng-model="newtodo" required >
+        <label class="sr-only" for="inlineFormInputMD">Todo</label>
+      </div>
+    </div>
+    <!-- Grid column -->
+    <div class="col-auto">
+    <!-- Grid column -->
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-0" ng-disabled="frm.$invalid">Add</button>
+    </div>
+    <!-- Grid column -->
+  </div>
+  <!-- Grid row -->
+</form>
+</div>
+<!-- Material auto-sizing form -->
+<div>
+<button class="btn purple-gradient" ng-click="clearCompleted()">clearCompleted</button>
+<div>
+</div>
+</div>
+</div>
+<hr width="45%">
+<div class="comeone" style="margin-left: 28%; width: 44%;">
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info" ng-repeat="todo in todos">
+      <input type="checkbox"  ng-model="todo.done"  />
+      <span id="yes" ng-class="{'done':todo.done}"> {{ todo.title }} </span>
+        <!-- Basic dropdown -->
+      <a class="btn btn-primary dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" style="float: right;">Task</a>
+
+      <div class="dropdown-menu">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          </div>
+        </div>
+              <button type="button" class="btn btn-danger">Delete</button>
+
+      </div>
+    </div>
+      <!-- Basic dropdown -->
+    </li>
+</ul>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+<footer>
+    <p>Done by Fanele</p>
+    <p>Contact information: <a href="https://www.instagram.com/djsfanzo_official/">Fanele@rapidtrade.biz</a>Fanele Mabaso taring web disign</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <!--angular script-->
+  <script text="text/javascript" src="angular/angular.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!--angularjs editor-->
+  <script  type="text/javascript" src="angular/main.js"></script>
+</body>
+</html>

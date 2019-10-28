@@ -1,0 +1,26 @@
+.done {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+}
+
+#yes {
+    font-family: 'Berkshire Swash', cursive;
+     font-size: 35px;
+}
+
+li {
+    list-style-type: none ;
+}
+
+p {
+    font-family: 'Kaushan Script', cursive;
+ 
+}
+footer {
+    margin-top: 23%;
+}
+
